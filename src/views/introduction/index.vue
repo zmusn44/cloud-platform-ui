@@ -2,7 +2,7 @@
 <div class="app-container">
   <div class="wrapper">
     <code>
-      AG-Admin之前的版本是小前端的方式去运作的，终于给大家换了一波大前端：AG-Admin2.0版本。
+      Cloud-Platform之前的版本是小前端的方式去运作的，终于给大家换了一波大前端：Cloud-Platform版本。
         <ul>
           <li><a target='_blank' class='lin' href="https://github.com/wxiaoqi/ace-admin">后端github项目地址</a></li>
           <li><a target='_blank' class='lin' href="http://git.oschina.net/geek_qi/ace-security">后端gitchina项目地址</a></li>
