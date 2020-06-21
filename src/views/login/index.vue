@@ -2,12 +2,12 @@
 <div class="login-container">
   <el-form autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left" label-width="0px" class="card-box login-form">
     <h3 class="title">系统登录</h3>
-    <el-form-item prop="username">
-      <span class="svg-container"><icon-svg icon-class="jiedianyoujian"></icon-svg></span>
+    <el-form-item prop="username" >
+      <span class="svg-container"><i class="el-icon-star-on"></i></span>
       <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="账户"></el-input>
     </el-form-item>
     <el-form-item prop="password">
-      <span class="svg-container"><icon-svg icon-class="mima"></icon-svg></span>
+      <span class="svg-container"><i class="el-icon-view"></i></span>
       <el-input name="password" type="password" @keyup.enter.native="handleLogin" v-model="loginForm.password" autoComplete="on" placeholder="密码"></el-input>
     </el-form-item>
     <el-form-item>
@@ -156,7 +156,11 @@ export default {
 .login-container {
     @include relative;
     height: 100vh;
-    background-color: #2d3a4b;
+        // background-color: #2d3a4b;
+    // background-color: $bg;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../../assets/images/login-bg.jpg');
     input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0 1000px #293444 inset !important;
         -webkit-text-fill-color: #fff !important;
@@ -167,7 +171,6 @@ export default {
         -webkit-appearance: none;
         border-radius: 0;
         padding: 12px 5px 12px 15px;
-        color: #eeeeee;
         height: 47px;
     }
     .el-input {
@@ -177,23 +180,28 @@ export default {
     }
     .svg-container {
         padding: 6px 5px 6px 15px;
-        color: #889aa4;
+        color: gray;
+        vertical-align: middle;
+        width: 30px;
+        display: inline-block;
     }
     .title {
         font-size: 26px;
         font-weight: 400;
-        color: #eeeeee;
-        margin: 0 auto 40px;
+        color: gray;
+        margin: 0 auto 18px;
         text-align: center;
         font-weight: bold;
     }
     .login-form {
+        border-radius: 5px;
         position: absolute;
-        left: 0;
-        right: 0;
-        width: 400px;
-        padding: 35px 35px 15px;
+        right: 170px;
+        top: 12%;
+        width: 350px;
+        padding: 15px 20px 5px 20px;
         margin: 120px auto;
+        background-color: white;
     }
     .el-form-item {
         border: 1px solid rgba(255, 255, 255, 0.1);
